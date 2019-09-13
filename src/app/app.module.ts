@@ -10,6 +10,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LivrePage } from '../pages/livre/livre';
 import { CdPage } from '../pages/cd/cd';
 import { LivresService } from '../pages/services/livre.service';
+import { DetailLivrePage } from '../pages/livre/detail_livre/detail_livre';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LivresService } from '../pages/services/livre.service';
     HomePage,
     TabsPage,
     LivrePage,
-    CdPage
+    CdPage,
+    DetailLivrePage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { LivresService } from '../pages/services/livre.service';
     HomePage,
     TabsPage,
     LivrePage,
-    CdPage
+    CdPage,
+    DetailLivrePage
   ],
   providers: [
     StatusBar,
