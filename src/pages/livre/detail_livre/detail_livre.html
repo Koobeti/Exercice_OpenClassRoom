@@ -14,6 +14,11 @@
         <ion-card-content>
             {{description}}
         </ion-card-content>
+
+        <ion-buttons ion-row padding>
+            <ion-col><button full ion-button (click)="changeStatus(1)" [disabled]="preter" class="btn_pret">Prêter</button></ion-col>
+            <ion-col><button full ion-button (click)="changeStatus(0)" [disabled]="!preter" class="btn_rendre">Rendre</button></ion-col>
+        </ion-buttons>
     </ion-card>
 </ion-content>
       

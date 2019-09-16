@@ -22,8 +22,8 @@ export class LivrePage {
     this.listLivre = this.livreService.listLivre.slice();
   }
 
-  afficheLivre(item) {
-    let pageModal = this.modalCtrl.create(DetailLivrePage, {item: item});
+  afficheLivre(index) {
+    let pageModal = this.modalCtrl.create(DetailLivrePage, {index: index});
     pageModal.present();
   }
 }

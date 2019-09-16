@@ -11,5 +11,10 @@
 </ion-header>
 
 <ion-content padding>
-  <button *ngFor="let item of listLivre" ion-item (click)="afficheLivre(item)">{{item.titre}} <span class="auteur">({{item.auteur}})</span></button>
+  <ion-buttons>
+    <button *ngFor="let item of listLivre; let i = index" ion-item (click)="afficheLivre(i)">
+      <ion-icon class="icon-list-livre" [name]="item.preter?'log-in':'log-out'" [color]="item.preter?'danger':'primary'"></ion-icon>
+      {{item.titre}} <span class="auteur">({{item.auteur}})</span>
+    </button>
+  </ion-buttons>
 </ion-content>
