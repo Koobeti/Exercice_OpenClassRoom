@@ -1,0 +1,38 @@
+<ion-header>
+        <ion-navbar>
+            <ion-buttons start>
+                <button ion-button (click)="dismiss()">Fermer</button>
+            </ion-buttons>
+            <ion-title>Détail du CD</ion-title>
+        </ion-navbar>
+    </ion-header>
+    
+    <ion-content padding>
+        <ion-card>
+            <img src="../../../assets/imgs/{{image_album}}"/>
+            <ion-card-content>
+                <ion-card-title>{{auteur}} - {{titre}}</ion-card-title>
+                <p>Compositeur: {{compositeur}}</p>
+            </ion-card-content>
+            <ion-buttons ion-row padding>
+                <ion-col><button full ion-button (click)="changeStatus(1)" [disabled]="preter" class="btn_pret">Prêter</button></ion-col>
+                <ion-col><button full ion-button (click)="changeStatus(0)" [disabled]="!preter" class="btn_rendre">Rendre</button></ion-col>
+            </ion-buttons>
+        </ion-card>
+
+    <!--
+        <ion-card>
+            <ion-card-header>{{auteur}} - {{titre}}</ion-card-header>
+    
+            <ion-card-content>
+                {{compositeur}}
+            </ion-card-content>
+    
+            <ion-buttons ion-row padding>
+                <ion-col><button full ion-button (click)="changeStatus(1)" [disabled]="preter" class="btn_pret">Prêter</button></ion-col>
+                <ion-col><button full ion-button (click)="changeStatus(0)" [disabled]="!preter" class="btn_rendre">Rendre</button></ion-col>
+            </ion-buttons>
+        </ion-card>
+    -->
+    </ion-content>
+          

@@ -7,7 +7,7 @@ import { LivresService } from '../../services/livre.service';
   templateUrl: 'detail_livre.html',
 })
 export class DetailLivrePage {
-  item: {titre: "", auteur: "", description: "", preter: number};
+  item: {titre: string, auteur: "", description: "", preter: number};
   index: number;
   titre: string;
   auteur: string;

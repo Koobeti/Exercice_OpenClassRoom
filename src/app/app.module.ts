@@ -11,6 +11,8 @@ import { LivrePage } from '../pages/livre/livre';
 import { CdPage } from '../pages/cd/cd';
 import { LivresService } from '../pages/services/livre.service';
 import { DetailLivrePage } from '../pages/livre/detail_livre/detail_livre';
+import { DetailCdPage } from '../pages/cd/detail_cd/detail_cd';
+import { CdService } from '../pages/services/cd.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { DetailLivrePage } from '../pages/livre/detail_livre/detail_livre';
     TabsPage,
     LivrePage,
     CdPage,
-    DetailLivrePage
+    DetailLivrePage,
+    DetailCdPage
   ],
   imports: [
     BrowserModule,
@@ -32,12 +35,14 @@ import { DetailLivrePage } from '../pages/livre/detail_livre/detail_livre';
     TabsPage,
     LivrePage,
     CdPage,
-    DetailLivrePage
+    DetailLivrePage,
+    DetailCdPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     LivresService,
+    CdService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
