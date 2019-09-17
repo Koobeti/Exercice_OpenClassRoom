@@ -7,7 +7,8 @@ import { LivresService } from '../../services/livre.service';
   templateUrl: 'detail_livre.html',
 })
 export class DetailLivrePage {
-  item: {titre: "", auteur: "", description: "", preter: number};
+  item: {titre: string, auteur: string, description: string, preter: number};
+  // Pourquoi la ligne au-dessus ne prend pas une initialisation avec "" pour les string
   index: number;
   titre: string;
   auteur: string;

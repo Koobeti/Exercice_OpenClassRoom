@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
+import { modelCd } from '../../models/modelCd';
+import { CdService } from '../services/cd.service';
+import { DetailCdPage } from './detail_cd/detail_cd';
 
 @Component({
   selector: 'page-cd',
@@ -7,11 +10,20 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class CdPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  listCd: modelCd[];
+
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams, 
+              public CdService: CdService,
+              public modalCtrl: ModalController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CdPage');
+  ionViewWillEnter() {
+    this.listCd = this.CdService.listCd.slice();
   }
 
+  afficheCD(index) {
+    let pageModal = this.modalCtrl.create(DetailCdPage, {index: index});
+    pageModal.present();
+  }
 }

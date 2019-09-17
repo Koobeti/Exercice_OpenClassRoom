@@ -1,14 +1,16 @@
-export class modelLivre {
+export class modelCd {
 
     auteur: string;
     titre: string;
-    description: string;
+    compositeur: string;
+    image_album: string;
     preter: number;
-
+    
     constructor() {
         this.auteur = "";
         this.titre = "";
-        this.description = "";
+        this.compositeur = "";
+        this.image_album = "";
         this.preter = 0;
     }
   }
