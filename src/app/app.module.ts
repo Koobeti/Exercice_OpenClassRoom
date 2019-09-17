@@ -13,6 +13,7 @@ import { LivresService } from '../pages/services/livre.service';
 import { DetailLivrePage } from '../pages/livre/detail_livre/detail_livre';
 import { DetailCdPage } from '../pages/cd/detail_cd/detail_cd';
 import { CdService } from '../pages/services/cd.service';
+import { ReglagePage } from '../pages/reglage/reglage';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CdService } from '../pages/services/cd.service';
     LivrePage,
     CdPage,
     DetailLivrePage,
-    DetailCdPage
+    DetailCdPage,
+    ReglagePage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { CdService } from '../pages/services/cd.service';
     LivrePage,
     CdPage,
     DetailLivrePage,
-    DetailCdPage
+    DetailCdPage,
+    ReglagePage
   ],
   providers: [
     StatusBar,

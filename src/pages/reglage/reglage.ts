@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-reglage',
+  templateUrl: 'reglage.html'
 })
-export class HomePage {
-
+export class ReglagePage {
   constructor(public navCtrl: NavController, private menuCtrl: MenuController) {
-
   }
 
   onToggleMenu() {    
